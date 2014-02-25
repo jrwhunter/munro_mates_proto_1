@@ -1,0 +1,42 @@
+<h1>Listing hills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Other info</th>
+      <th>Origin</th>
+      <th>Book</th>
+      <th>Height</th>
+      <th>Grid ref</th>
+      <th>Map</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hills.each do |hill| %>
+      <tr>
+        <td><%= hill.id %></td>
+        <td><%= hill.name %></td>
+        <td><%= hill.other_info %></td>
+        <td><%= hill.origin %></td>
+        <td><%= hill.book %></td>
+        <td><%= hill.height %></td>
+        <td><%= hill.grid_ref %></td>
+        <td><%= hill.map %></td>
+        <td><%= link_to 'Show', hill %></td>
+        <td><%= link_to 'Edit', edit_hill_path(hill) %></td>
+        <td><%= link_to 'Destroy', hill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Destroy_all', destroy_all_hills_path  %>
+<%= link_to 'Manage Hills', manage_hills_path %>

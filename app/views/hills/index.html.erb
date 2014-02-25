@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorted Tables</title>
+</head>
+<body>
+<h1>Hills</h1>
+<%= link_to 'Register', register_users_path %>
+<div id="parent">
+<div id="accordion">
+<h3>Columns</h3>
+
+<div id="column_check">
+  <input type="checkbox" name="column_check" value="ID" checked="checked"/>ID<br/>
+  <input type="checkbox" name="column_check" value="NAME" checked="checked"/>NAME<br/>
+  <input type="checkbox" name="column_check" value="HEIGHT" checked="checked"/>HEIGHT<br/>
+  <input type="checkbox" name="column_check" value="OTHER INFO" checked="checked"/>OTHER INFO<br/>
+  <input type="checkbox" name="column_check" value="ORIGIN" checked="checked"/>ORIGIN<br/>
+  <input type="checkbox" name="column_check" value="CHAPTER" checked="checked"/>CHAPTER<br/>
+  <input type="checkbox" name="column_check" value="GRID REF" checked="checked"/>GRID REF<br/>
+</div>
+<h3>Mates</h3>
+<div>
+</div>
+</div>
+<div>
+<%= render 'layouts/hill_list' %>
+</div>
+</div>
+</body>
+</html>

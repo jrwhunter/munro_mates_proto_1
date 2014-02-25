@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  name: MyString
+  other_info: MyString
+  origin: MyString
+  book: MyString
+  height: MyString
+  grid_ref: MyString
+  map: MyString
+
+two:
+  id: MyString
+  name: MyString
+  other_info: MyString
+  origin: MyString
+  book: MyString
+  height: MyString
+  grid_ref: MyString
+  map: MyString

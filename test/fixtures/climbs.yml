@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_name: MyString
+  hill_number: MyString
+  date: 2014-02-21
+  comments: MyString
+
+two:
+  user_name: MyString
+  hill_number: MyString
+  date: 2014-02-21
+  comments: MyString

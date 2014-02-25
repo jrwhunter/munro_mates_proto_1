@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @hill.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hill.name %>
+</p>
+
+<p>
+  <strong>Other info:</strong>
+  <%= @hill.other_info %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @hill.origin %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @hill.book %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @hill.height %>
+</p>
+
+<p>
+  <strong>Grid ref:</strong>
+  <%= @hill.grid_ref %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @hill.map %>
+</p>
+
+<%= link_to 'Edit', edit_hill_path(@hill) %> |
+<%= link_to 'Back', hills_path %>

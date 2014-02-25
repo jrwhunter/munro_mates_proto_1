@@ -1,0 +1,27 @@
+<table id="theTable" class="tablesorter"> 
+	<thead>
+		<tr>
+        <th><b>NUMBER/b></th>
+        <th><b>NAME</b></th>
+        <th><b>HEIGHT</b></th>
+		<th><b>OTHER INFO</b></th>
+        <th><b>ORIGIN</b></th>
+        <th><b>CHAPTER</b></th>
+        <th><b>GRID REF</b></th>
+        </tr>
+	</thead>
+
+    <tbody>
+        <% @hills.each do |hill| %>
+            <tr>
+                <td><%= hill['number'] %></td>
+                <td><%= hill['name'] %></td>
+                <td><%= hill['height'] %></td>
+                <td><%= hill['other_info'] %></td>
+                <td><%= hill['origin'] %></td>
+                <td><%= hill['book'] %></td>
+                <td><a href="<%=hill['map']%>"><%= hill['grid_ref'] %></a></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

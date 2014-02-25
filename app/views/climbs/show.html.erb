@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @climb.user_name %>
+</p>
+
+<p>
+  <strong>Hill number:</strong>
+  <%= @climb.hill_number %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @climb.date %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @climb.comments %>
+</p>
+
+<%= link_to 'Edit', edit_climb_path(@climb) %> |
+<%= link_to 'Back', climbs_path %>
