@@ -10,11 +10,17 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = User.new(user_params)
+    if @user.save
+      # Handle a successful save.
+    else
+      render 'new'
+    end
   end
 
   # GET /users/1/edit
@@ -69,6 +75,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :club, :visible)
+      params.permit(:name, :email, :password, :password_confirmation, :club, :visible)
     end
 end

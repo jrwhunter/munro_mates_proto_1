@@ -1,42 +1,20 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<form accept-charset="UTF-8" action="/users" class="create_user"
+      id="create_user" method="post">
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <label for="user_name">Name</label>
+  <input id="user_name" name="user[name]" type="text" />
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-    <div class="field">
-    <%= f.label "Confirm Password" %><br>
-    <%= f.text_field :password %>
-  </div>
+  <label for="user_email">Email</label>
+  <input id="user_email" name="user[email]" type="text" />
 
-  <div class="field">
-    <%= f.label :club %><br>
-    <%= f.text_field :club %>
-  </div>
-  <div class="field">
-    <%= f.label :visible %><br>
-    <%= f.check_box :visible %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <label for="user_password">Password</label>
+  <input id="user_password" name="user[password]"
+         type="password" />
+
+  <label for="user_password_confirmation">Confirmation</label>
+  <input id="user_password_confirmation"
+         name="user[password_confirmation]" type="password" />
+
+  <input class="btn btn-large btn-primary" name="commit" type="submit"
+         value="Create my account" />
+</form>
